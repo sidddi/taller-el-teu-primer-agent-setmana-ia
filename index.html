@@ -44,13 +44,13 @@
     <p>Textos per copiar i enganxar a Agent Builder. Funciona sense llicència de Microsoft 365 Copilot.</p>
     <nav aria-label="Seccions">
       <a href="#passos">Pas a pas</a>
-      <a href="#prompt">Prompt guiat</a>
+      <a href="#identitat">Identitat</a>
       <a href="#instruccions">Instruccions</a>
-      <a href="#font">Font web</a>
+      <a href="#coneixement">Coneixement</a>
       <a href="#suggerides">Sol·licituds</a>
       <a href="#proves">Proves</a>
       <a href="#destresa">Destresa</a>
-      <a href="#elteu">El teu agent</a>
+      <a href="#casa">A casa</a>
     </nav>
   </div>
 </header>
@@ -58,32 +58,21 @@
 <main class="wrap">
 
 <section id="passos">
-  <h2>Pas a pas</h2>
+  <h2>Pas a pas a Agent Builder</h2>
+  <p class="hint">A Copilot Chat. Cada pas té els textos a sota.</p>
   <ol class="steps">
-    <li>A Copilot Chat: <strong>Agents › Agent nou</strong>.</li>
-    <li>Copia el <strong>prompt guiat</strong> i enganxa'l al xat del generador. Espera uns 40 segons.</li>
-    <li><strong>Revisa les instruccions</strong>: han de dir que cita sempre la font i que no dona consell mèdic personal. Si no, compara-les amb les de referència.</li>
-    <li>Comprova que a <strong>Cerca web</strong> hi ha Canal Salut. Si no hi és: Coneixement › Afegeix coneixements › enganxa l'adreça i prem el botó <strong>+</strong> (no Retorn).</li>
-    <li>Si et surten activats Fitxers al núvol, Outlook o Equips, desactiva'ls.</li>
-    <li>Revisa les <strong>sol·licituds suggerides</strong> que ha proposat (o fes servir les d'aquesta pàgina).</li>
-    <li>Canvia a <strong>Versió preliminar</strong> i fes les proves.</li>
-    <li><strong>Destreses › fletxa al costat d'Afegeix › Crea amb el xat</strong> i enganxa el text de la destresa.</li>
-    <li>Prem <strong>Crea</strong>. L'agent queda privat fins que el comparteixes.</li>
+    <li><strong>Agent nou</strong>: Agents › Agent nou › <strong>Omet</strong>.</li>
+    <li><strong>Identitat</strong>: nom i descripció de l'agent. Per canviar el nom, fes clic al nom, selecciona el text i escriu-hi a sobre.</li>
+    <li><strong>Instruccions</strong>: rol, objectiu, normes i format. Demana-les a Copilot Chat o enganxa les de referència.</li>
+    <li><strong>Coneixement</strong>: afegeix l'enllaç de Canal Salut i prem el botó <strong>+</strong> (no Retorn). Si et surten activats Fitxers al núvol, Outlook o Equips, desactiva'ls.</li>
+    <li><strong>Sol·licituds suggerides</strong>: tres exemples per començar.</li>
+    <li><strong>Proves</strong>: pestanya <strong>Versió preliminar</strong>. Quan funcioni, prem <strong>Crea</strong>. L'agent queda privat fins que el comparteixes.</li>
   </ol>
-</section>
-
-<section id="prompt">
-  <h2>Prompt guiat per crear l'agent</h2>
-  <p class="hint">Agents › Agent nou › enganxa'l al xat del generador. Agent Builder escriurà les instruccions i afegirà la font.</p>
-  <div class="card">
-    <div class="card-head"><span class="label">Prompt guiat</span><button class="copy" type="button">Copia</button></div>
-    <pre>Vull crear un agent anomenat "Informació de salut pública" per al personal de la Generalitat que orienta la ciutadania. Ha de respondre preguntes de salut pública (vacunacions, campanyes, prevenció, serveis) fent servir només la web de Canal Salut: https://canalsalut.gencat.cat/ca/. Escriu les instruccions en quatre blocs: ROL, OBJECTIU, NORMES numerades i FORMAT DE RESPOSTA. Les normes han d'incloure: 1) respondre només amb informació de Canal Salut, 2) citar sempre l'enllaç a la pàgina exacta i no inventar res si no ho troba, 3) no fer diagnòstics ni donar consell mèdic personal (medicaments, dosis, tractaments) i derivar al CAP, al 061 Salut Respon o, en urgències, al 112, 4) avisar si algú escriu dades personals o de salut i no repetir-les, 5) preguntar si la consulta és ambigua, 6) explicar què pot fer si li pregunten coses que no són salut pública, 7) respondre en català i en llenguatge clar. El format ha de ser: resposta breu, detalls clau en llista i l'enllaç a Canal Salut. Afegeix Canal Salut com a font de coneixement i no facis servir dades de la feina.</pre>
-  </div>
-  <p class="note">El generador pot afegir per iniciativa pròpia una destresa i sol·licituds suggerides, i pot deixar activades les dades de la feina. Revisa-ho sempre abans de provar.</p>
+  <p class="note">Després de les proves afegirem una <a href="#destresa">destresa</a>. Els menús de Copilot poden canviar lleugerament de nom o de lloc.</p>
 </section>
 
 <section id="identitat">
-  <h2>Nom i descripció (si ho fas a mà)</h2>
+  <h2>02 · Identitat</h2>
   <div class="card">
     <div class="card-head"><span class="label">Nom</span><button class="copy" type="button">Copia</button></div>
     <pre>Informació de salut pública</pre>
@@ -95,11 +84,16 @@
 </section>
 
 <section id="instruccions">
-  <h2>Instruccions de referència</h2>
-  <p class="hint">Compara-les amb les que ha generat el prompt guiat, o enganxa-les al camp Instruccions si vols fer-ho a mà. Per adaptar l'agent a una altra web, canvia el rol, l'objectiu i les normes 1 i 3.</p>
+  <h2>03 · Instruccions</h2>
+  <p class="hint"><strong>Opció A</strong>: obre Copilot Chat en una altra pestanya, enganxa aquest prompt, revisa el que et retorni i copia-ho al camp Instruccions.</p>
   <div class="card">
-    <div class="card-head"><span class="label">Instruccions de l'agent</span><button class="copy" type="button">Copia</button></div>
-<pre>ROL
+    <div class="card-head"><span class="label">Prompt per a Copilot Chat</span><button class="copy" type="button">Copia</button></div>
+    <pre>Escriu-me les instruccions d'un agent de Copilot anomenat "Informació de salut pública" per al personal de la Generalitat que orienta la ciutadania. Ha de respondre preguntes de salut pública (vacunacions, campanyes, prevenció, serveis) fent servir només la web de Canal Salut: https://canalsalut.gencat.cat/ca/. Han de tenir quatre blocs: ROL, OBJECTIU, NORMES numerades i FORMAT DE RESPOSTA. Les normes han d'incloure: 1) respondre només amb informació de Canal Salut, 2) citar sempre l'enllaç a la pàgina exacta i no inventar res si no ho troba, 3) no fer diagnòstics ni donar consell mèdic personal (medicaments, dosis, tractaments) i derivar al CAP, al 061 Salut Respon o, en urgències, al 112, 4) avisar si algú escriu dades personals o de salut i no repetir-les, 5) preguntar si la consulta és ambigua, 6) explicar què pot fer si li pregunten coses que no són salut pública, 7) respondre en català i en llenguatge clar. El format ha de ser: resposta breu, detalls clau en llista i l'enllaç a Canal Salut. Dona-me-les en text pla, sense taules, llestes per enganxar al camp Instruccions d'Agent Builder.</pre>
+  </div>
+  <p class="hint"><strong>Opció B</strong>: enganxa directament les instruccions de referència, o fes-les servir per comparar les que t'ha escrit Copilot. Han de dir que cita sempre la font i que no dona consell mèdic personal.</p>
+  <div class="card">
+    <div class="card-head"><span class="label">Instruccions de referència</span><button class="copy" type="button">Copia</button></div>
+    <pre>ROL
 Ets l'agent d'Informació de salut pública de la Generalitat de Catalunya. Ajudes el personal públic a trobar informació oficial de Canal Salut per orientar la ciutadania.
 
 OBJECTIU
@@ -121,10 +115,11 @@ FORMAT DE RESPOSTA
 - Enllaç a la pàgina oficial de Canal Salut
 Sigues breu.</pre>
   </div>
+  <p class="note">Per adaptar-les a una altra web, canvia el rol, l'objectiu i les normes 1 i 3.</p>
 </section>
 
-<section id="font">
-  <h2>Font web</h2>
+<section id="coneixement">
+  <h2>04 · Coneixement</h2>
   <p class="hint">Coneixement › Afegeix coneixements › enganxa l'adreça › prem el botó +.</p>
   <div class="card">
     <div class="card-head"><span class="label">Canal Salut</span><button class="copy" type="button">Copia</button></div>
@@ -133,7 +128,7 @@ Sigues breu.</pre>
 </section>
 
 <section id="suggerides">
-  <h2>Sol·licituds suggerides</h2>
+  <h2>05 · Sol·licituds suggerides</h2>
   <p class="hint">Títol a la primera casella, missatge a la segona.</p>
   <div class="card">
     <div class="card-head"><span class="label">Títol: Vacuna de la grip</span><button class="copy" type="button">Copia el missatge</button></div>
@@ -150,7 +145,7 @@ Sigues breu.</pre>
 </section>
 
 <section id="proves">
-  <h2>Preguntes de prova</h2>
+  <h2>06 · Posem-lo a prova</h2>
   <p class="hint">Fes-les a Versió preliminar. Obre els enllaços de les respostes: comprovar la font també és part de la prova.</p>
   <div class="card">
     <div class="card-head"><span class="label">01 · Cas normal</span><button class="copy" type="button">Copia</button></div>
@@ -173,27 +168,39 @@ Sigues breu.</pre>
     <p class="expected">Esperat: diu que no és el seu àmbit.</p>
   </div>
   <div class="card">
-    <div class="card-head"><span class="label">05 · Destresa</span><button class="copy" type="button">Copia</button></div>
-    <pre>Fes un SMS per recordar a la ciutadania que es pot vacunar de la grip.</pre>
-    <p class="expected">Esperat: un sol missatge curt, de vostè, amb l'enllaç a Canal Salut. Fes la mateixa petició abans i després d'afegir la destresa i compara.</p>
+    <div class="card-head"><span class="label">06 · La teva prova</span></div>
+    <p style="margin:0">Fes una pregunta real que et facin a la feina. T'hauria servit la resposta?</p>
   </div>
-  <p class="note">Si una prova falla: canvia una sola norma de les instruccions, obre un xat nou i torna a provar.</p>
+  <p class="note">Si una prova falla: canvia una sola norma, obre un <strong>Xat nou</strong> i torna a provar.</p>
 </section>
 
 <section id="destresa">
-  <h2>Destresa: Missatge curt</h2>
-  <p class="hint">L'agent ja sap la informació; la destresa li ensenya a convertir-la en un SMS. Abans d'afegir-la, demana un SMS sobre la grip i guarda el resultat per comparar.</p>
-  <p class="hint">Destreses › fletxa al costat d'Afegeix › Crea amb el xat. Enganxa aquest text al xat de l'esquerra i espera que acabi.</p>
+  <h2>Després: destresa Missatge curt</h2>
+  <p class="hint">Les instruccions s'apliquen sempre. La destresa només s'activa quan cal i fa una tasca concreta: aquí, convertir la informació en un SMS.</p>
+  <p class="hint"><strong>Abans</strong>: fes la prova 05 i guarda la resposta. <strong>Després</strong>: Destreses › fletxa al costat d'Afegeix › Crea amb el xat, enganxa la petició al xat de l'esquerra i espera que acabi.</p>
   <div class="card">
     <div class="card-head"><span class="label">Petició per crear la destresa</span><button class="copy" type="button">Copia</button></div>
     <pre>Vull crear una habilitat nova anomenada "Missatge curt". S'ha d'activar quan l'usuari demani un SMS, un WhatsApp o un missatge curt per a la ciutadania. Ha de: 1) buscar la informació a Canal Salut, 2) escriure un sol missatge amb frases molt curtes: el text, sense comptar l'enllaç, ha de tenir com a màxim 90 caràcters, 3) incloure què ha de fer la persona i, al final, l'enllaç a la pàgina exacta de Canal Salut, 4) fer servir tractament de vostè i llenguatge clar, sense emojis ni abreviatures. No indiquis el nombre de caràcters. No ha d'incloure dades personals ni consell mèdic. No canviïs res més de l'agent.</pre>
   </div>
-  <p class="note">Per què «90 caràcters sense l'enllaç» i no «160 en total»? Perquè la IA compta malament els caràcters: a les proves deia 158 quan eren 163. Amb aquest marge, el missatge sempre cap en un SMS.</p>
+  <div class="card">
+    <div class="card-head"><span class="label">05 · Prova de la destresa</span><button class="copy" type="button">Copia</button></div>
+    <pre>Fes un SMS per recordar a la ciutadania que es pot vacunar de la grip.</pre>
+    <p class="expected">Esperat: un sol missatge curt, de vostè, amb l'enllaç a Canal Salut. Compara'l amb el que feia abans de tenir la destresa.</p>
+  </div>
+  <p class="note">Agent Builder també retoca les instruccions perquè l'agent sàpiga quan ha de fer servir la destresa. Revisa els canvis ressaltats. I per què «90 caràcters sense l'enllaç»? Perquè la IA compta malament els caràcters: a les proves deia 158 quan eren 163.</p>
 </section>
 
-<section id="elteu">
-  <h2>Fes-ne un per a la teva feina</h2>
-  <p class="hint">Enganxa aquest prompt a Copilot Chat, omple els claudàtors i revisa el que et proposi abans de fer-lo servir.</p>
+<section id="casa">
+  <h2>A casa: la drecera del prompt guiat</h2>
+  <p class="hint">En comptes d'omplir el formulari, Agents › Agent nou i enganxa aquest prompt al xat del generador (sense prémer Omet). Agent Builder escriu les instruccions i afegeix la font.</p>
+  <div class="card">
+    <div class="card-head"><span class="label">Prompt guiat</span><button class="copy" type="button">Copia</button></div>
+    <pre>Vull crear un agent anomenat "Informació de salut pública" per al personal de la Generalitat que orienta la ciutadania. Ha de respondre preguntes de salut pública (vacunacions, campanyes, prevenció, serveis) fent servir només la web de Canal Salut: https://canalsalut.gencat.cat/ca/. Escriu les instruccions en quatre blocs: ROL, OBJECTIU, NORMES numerades i FORMAT DE RESPOSTA. Les normes han d'incloure: 1) respondre només amb informació de Canal Salut, 2) citar sempre l'enllaç a la pàgina exacta i no inventar res si no ho troba, 3) no fer diagnòstics ni donar consell mèdic personal (medicaments, dosis, tractaments) i derivar al CAP, al 061 Salut Respon o, en urgències, al 112, 4) avisar si algú escriu dades personals o de salut i no repetir-les, 5) preguntar si la consulta és ambigua, 6) explicar què pot fer si li pregunten coses que no són salut pública, 7) respondre en català i en llenguatge clar. El format ha de ser: resposta breu, detalls clau en llista i l'enllaç a Canal Salut. Afegeix Canal Salut com a font de coneixement i no facis servir dades de la feina.</pre>
+  </div>
+  <p class="note">Revisa sempre el resultat: el generador pot afegir per iniciativa pròpia una destresa i sol·licituds suggerides, i pot deixar activades les dades de la feina (Fitxers al núvol, Outlook, Equips). Desactiva-les.</p>
+
+  <h2 style="margin-top:28px">Fes-ne un per a la teva feina</h2>
+  <p class="hint">Canvia al prompt guiat el nom, la tasca, la web i les normes. Si encara no ho tens clar, demana ajuda a Copilot Chat:</p>
   <div class="card">
     <div class="card-head"><span class="label">Prompt per dissenyar el teu agent</span><button class="copy" type="button">Copia</button></div>
     <pre>Vull crear un agent amb Agent Builder de Copilot. La tasca que ha de fer és: [descriu la tasca]. Avui la faig així: [passos que segueixo]. El resultat que espero és: [resultat]. La web pública que pot consultar és: [adreça].
@@ -202,7 +209,14 @@ Escriu-me les instruccions de l'agent en quatre blocs (ROL, OBJECTIU, NORMES num
 
 Proposa'm també tres sol·licituds suggerides i tres preguntes de prova: un cas normal, un cas amb dades personals i un cas fora d'abast.</pre>
   </div>
-  <p class="note"><strong>Com triar una bona font web:</strong> funcionen millor les webs amb una pàgina per tema. Els PDF no s'accepten com a font, i les pàgines amb el detall amagat en subpàgines amb paràmetres sovint no es troben. Prova-la sempre amb una pregunta concreta i comprova l'enllaç de la resposta.</p>
+
+  <h2 style="margin-top:28px">Com triar una bona font web</h2>
+  <ul>
+    <li><strong>Funciona bé</strong>: webs amb una pàgina per tema, en HTML normal, com Canal Salut.</li>
+    <li><strong>Funciona malament</strong>: PDF (no s'accepten), pàgines menú amb el detall en subpàgines amb paràmetres (?moda=1) i adreces amb massa nivells.</li>
+    <li><strong>Comprova-ho en 2 minuts</strong>: afegeix la web i prem +, fes una pregunta amb resposta concreta, mira que les cites siguin d'aquella web i obre l'enllaç.</li>
+    <li><strong>Si no es pot connectar</strong>: escriu les regles o les dades clau a les instruccions.</li>
+  </ul>
 </section>
 
 </main>
@@ -216,7 +230,7 @@ Proposa'm també tres sol·licituds suggerides i tres preguntes de prova: un cas
     var original = btn.textContent;
     btn.setAttribute('aria-live', 'polite');
     btn.addEventListener('click', function () {
-      var text = btn.closest('.card').querySelector('pre').innerText;
+      var pre = btn.closest('.card').querySelector('pre'); if (!pre) return; var text = pre.innerText;
       var done = function () {
         btn.textContent = 'Copiat';
         btn.classList.add('done');
