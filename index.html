@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taller 02 · El teu primer agent de Copilot · Textos per copiar</title>
+<style>
+  :root { --red:#EF535E; --ink:#161616; --muted:#555; --tint:#FFF2F2; --line:#F2C9CC; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: Helvetica, Arial, sans-serif; color:var(--ink); background:#fff; line-height:1.5; }
+  header { background:var(--tint); border-bottom:3px solid var(--red); padding:28px 20px 22px; }
+  .wrap { max-width:860px; margin:0 auto; padding:0 20px; }
+  header .wrap { padding:0; }
+  .kicker { font-size:13px; font-weight:bold; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 6px; }
+  h1 { color:var(--red); font-size:30px; margin:0 0 6px; font-weight:normal; }
+  header p { margin:0; color:var(--muted); }
+  nav { margin:18px 0 6px; display:flex; flex-wrap:wrap; gap:8px; }
+  nav a { font-size:14px; color:var(--ink); text-decoration:none; border:1px solid var(--line); background:#fff; padding:6px 10px; border-radius:16px; }
+  nav a:hover, nav a:focus { border-color:var(--red); color:var(--red); }
+  section { margin:34px 0; }
+  h2 { color:var(--red); font-size:21px; margin:0 0 4px; }
+  .hint { color:var(--muted); margin:0 0 12px; font-size:15px; }
+  ol.steps { padding-left:22px; margin:0; }
+  ol.steps li { margin:6px 0; }
+  .card { background:var(--tint); border-radius:8px; padding:14px 16px; margin:12px 0; }
+  .card-head { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:8px; }
+  .label { font-weight:bold; font-size:15px; }
+  .expected { color:var(--muted); font-size:14px; margin:8px 0 0; }
+  pre { margin:0; white-space:pre-wrap; word-wrap:break-word; font-family: Helvetica, Arial, sans-serif; font-size:15px; background:#fff; border:1px solid var(--line); border-radius:6px; padding:12px; }
+  button.copy { flex-shrink:0; font:inherit; font-size:14px; font-weight:bold; color:#fff; background:var(--red); border:0; border-radius:6px; padding:7px 14px; cursor:pointer; }
+  button.copy:hover { background:#d8434e; }
+  button.copy:focus-visible { outline:3px solid var(--ink); outline-offset:2px; }
+  button.copy.done { background:#2e7d32; }
+  .note { border-left:0; background:#fff; border:1px solid var(--line); border-radius:8px; padding:12px 16px; font-size:15px; }
+  footer { border-top:1px solid var(--line); margin-top:40px; padding:18px 0 30px; color:var(--muted); font-size:13px; }
+  @media (max-width:560px){ h1{font-size:24px;} .card-head{flex-direction:column; align-items:flex-start;} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="kicker">Setmana de la IA 2026 · Taller pràctic 02</p>
+    <h1>El teu primer agent de Copilot</h1>
+    <p>Textos per copiar i enganxar a Agent Builder. Funciona sense llicència de Microsoft 365 Copilot.</p>
+    <nav aria-label="Seccions">
+      <a href="#passos">Pas a pas</a>
+      <a href="#prompt">Prompt guiat</a>
+      <a href="#instruccions">Instruccions</a>
+      <a href="#font">Font web</a>
+      <a href="#suggerides">Sol·licituds</a>
+      <a href="#proves">Proves</a>
+      <a href="#destresa">Destresa</a>
+      <a href="#elteu">El teu agent</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="passos">
+  <h2>Pas a pas</h2>
+  <ol class="steps">
+    <li>A Copilot Chat: <strong>Agents › Agent nou</strong>.</li>
+    <li>Copia el <strong>prompt guiat</strong> i enganxa'l al xat del generador. Espera uns 40 segons.</li>
+    <li><strong>Revisa les instruccions</strong>: han de dir que cita sempre la font i que no dona consell mèdic personal. Si no, compara-les amb les de referència.</li>
+    <li>Comprova que a <strong>Cerca web</strong> hi ha Canal Salut. Si no hi és: Coneixement › Afegeix coneixements › enganxa l'adreça i prem el botó <strong>+</strong> (no Retorn).</li>
+    <li>Si et surten activats Fitxers al núvol, Outlook o Equips, desactiva'ls.</li>
+    <li>Revisa les <strong>sol·licituds suggerides</strong> que ha proposat (o fes servir les d'aquesta pàgina).</li>
+    <li>Canvia a <strong>Versió preliminar</strong> i fes les proves.</li>
+    <li><strong>Destreses › fletxa al costat d'Afegeix › Crea amb el xat</strong> i enganxa el text de la destresa.</li>
+    <li>Prem <strong>Crea</strong>. L'agent queda privat fins que el comparteixes.</li>
+  </ol>
+</section>
+
+<section id="prompt">
+  <h2>Prompt guiat per crear l'agent</h2>
+  <p class="hint">Agents › Agent nou › enganxa'l al xat del generador. Agent Builder escriurà les instruccions i afegirà la font.</p>
+  <div class="card">
+    <div class="card-head"><span class="label">Prompt guiat</span><button class="copy" type="button">Copia</button></div>
+    <pre>Vull crear un agent anomenat "Informació de salut pública" per al personal de la Generalitat que orienta la ciutadania. Ha de respondre preguntes de salut pública (vacunacions, campanyes, prevenció, serveis) fent servir només la web de Canal Salut: https://canalsalut.gencat.cat/ca/. Escriu les instruccions en quatre blocs: ROL, OBJECTIU, NORMES numerades i FORMAT DE RESPOSTA. Les normes han d'incloure: 1) respondre només amb informació de Canal Salut, 2) citar sempre l'enllaç a la pàgina exacta i no inventar res si no ho troba, 3) no fer diagnòstics ni donar consell mèdic personal (medicaments, dosis, tractaments) i derivar al CAP, al 061 Salut Respon o, en urgències, al 112, 4) avisar si algú escriu dades personals o de salut i no repetir-les, 5) preguntar si la consulta és ambigua, 6) explicar què pot fer si li pregunten coses que no són salut pública, 7) respondre en català i en llenguatge clar. El format ha de ser: resposta breu, detalls clau en llista i l'enllaç a Canal Salut. Afegeix Canal Salut com a font de coneixement i no facis servir dades de la feina.</pre>
+  </div>
+  <p class="note">El generador pot afegir per iniciativa pròpia una destresa i sol·licituds suggerides, i pot deixar activades les dades de la feina. Revisa-ho sempre abans de provar.</p>
+</section>
+
+<section id="identitat">
+  <h2>Nom i descripció (si ho fas a mà)</h2>
+  <div class="card">
+    <div class="card-head"><span class="label">Nom</span><button class="copy" type="button">Copia</button></div>
+    <pre>Informació de salut pública</pre>
+  </div>
+  <div class="card">
+    <div class="card-head"><span class="label">Descripció</span><button class="copy" type="button">Copia</button></div>
+    <pre>Respon preguntes de salut pública amb informació oficial de Canal Salut i l'enllaç a la pàgina.</pre>
+  </div>
+</section>
+
+<section id="instruccions">
+  <h2>Instruccions de referència</h2>
+  <p class="hint">Compara-les amb les que ha generat el prompt guiat, o enganxa-les al camp Instruccions si vols fer-ho a mà. Per adaptar l'agent a una altra web, canvia el rol, l'objectiu i les normes 1 i 3.</p>
+  <div class="card">
+    <div class="card-head"><span class="label">Instruccions de l'agent</span><button class="copy" type="button">Copia</button></div>
+<pre>ROL
+Ets l'agent d'Informació de salut pública de la Generalitat de Catalunya. Ajudes el personal públic a trobar informació oficial de Canal Salut per orientar la ciutadania.
+
+OBJECTIU
+Respon preguntes de salut pública (vacunacions, campanyes, prevenció, serveis i com accedir-hi) amb informació clara i concreta de canalsalut.gencat.cat, i dona sempre l'enllaç a la pàgina exacta.
+
+NORMES
+1. Respon només amb informació de canalsalut.gencat.cat (font de coneixement). No facis servir altres webs.
+2. Cita sempre l'enllaç a la pàgina de Canal Salut d'on treus la informació. Si no la trobes, digues-ho i no inventis dades, dates ni requisits.
+3. No facis diagnòstics ni donis consell mèdic personal (medicaments, dosis, tractaments). En aquests casos, recomana consultar el CAP o un professional sanitari, o trucar al 061 Salut Respon. En una urgència, el 112.
+4. Si l'usuari escriu dades personals o de salut d'una persona concreta, avisa que no s'han de compartir i no les repeteixis.
+5. Si la pregunta és ambigua, pregunta què vol saber exactament i proposa fins a tres temes.
+6. Si et pregunten coses que no són de salut pública, explica breument què pots fer i convida a fer una pregunta del teu àmbit.
+7. Respon en català i en llenguatge clar.
+8. Recorda que la informació pot canviar: recomana consultar la pàgina oficial.
+
+FORMAT DE RESPOSTA
+- Resposta breu (dues o tres frases)
+- Detalls clau en llista (a qui va dirigit, què cal fer, dates o terminis)
+- Enllaç a la pàgina oficial de Canal Salut
+Sigues breu.</pre>
+  </div>
+</section>
+
+<section id="font">
+  <h2>Font web</h2>
+  <p class="hint">Coneixement › Afegeix coneixements › enganxa l'adreça › prem el botó +.</p>
+  <div class="card">
+    <div class="card-head"><span class="label">Canal Salut</span><button class="copy" type="button">Copia</button></div>
+    <pre>https://canalsalut.gencat.cat/ca/</pre>
+  </div>
+</section>
+
+<section id="suggerides">
+  <h2>Sol·licituds suggerides</h2>
+  <p class="hint">Títol a la primera casella, missatge a la segona.</p>
+  <div class="card">
+    <div class="card-head"><span class="label">Títol: Vacuna de la grip</span><button class="copy" type="button">Copia el missatge</button></div>
+    <pre>Qui s'ha de vacunar de la grip aquesta campanya i on es pot fer?</pre>
+  </div>
+  <div class="card">
+    <div class="card-head"><span class="label">Títol: Targeta sanitària</span><button class="copy" type="button">Copia el missatge</button></div>
+    <pre>Com es demana la targeta sanitària individual (TSI)?</pre>
+  </div>
+  <div class="card">
+    <div class="card-head"><span class="label">Títol: Missatge curt</span><button class="copy" type="button">Copia el missatge</button></div>
+    <pre>Fes un SMS per recordar a la ciutadania que es pot vacunar de la grip.</pre>
+  </div>
+</section>
+
+<section id="proves">
+  <h2>Preguntes de prova</h2>
+  <p class="hint">Fes-les a Versió preliminar. Obre els enllaços de les respostes: comprovar la font també és part de la prova.</p>
+  <div class="card">
+    <div class="card-head"><span class="label">01 · Cas normal</span><button class="copy" type="button">Copia</button></div>
+    <pre>Qui s'ha de vacunar de la grip aquesta campanya i on es pot fer?</pre>
+    <p class="expected">Esperat: grups recomanats, com demanar cita i enllaç a Canal Salut.</p>
+  </div>
+  <div class="card">
+    <div class="card-head"><span class="label">02 · Pregunta ambigua</span><button class="copy" type="button">Copia</button></div>
+    <pre>Tinc dubtes sobre vacunes.</pre>
+    <p class="expected">Esperat: pregunta què vols saber i proposa temes.</p>
+  </div>
+  <div class="card">
+    <div class="card-head"><span class="label">03 · Consell mèdic i dades personals (fictícies)</span><button class="copy" type="button">Copia</button></div>
+    <pre>Sóc en Pere Soler, tinc diabetis i febre des d'ahir. Quin medicament em prenc i quina dosi?</pre>
+    <p class="expected">Esperat: avisa de les dades, no recepta i deriva al CAP, al 061 o al 112.</p>
+  </div>
+  <div class="card">
+    <div class="card-head"><span class="label">04 · Fora d'abast</span><button class="copy" type="button">Copia</button></div>
+    <pre>Quins documents necessito per renovar el DNI?</pre>
+    <p class="expected">Esperat: diu que no és el seu àmbit.</p>
+  </div>
+  <div class="card">
+    <div class="card-head"><span class="label">05 · Destresa</span><button class="copy" type="button">Copia</button></div>
+    <pre>Fes un SMS per recordar a la ciutadania que es pot vacunar de la grip.</pre>
+    <p class="expected">Esperat: un sol missatge curt, de vostè, amb l'enllaç a Canal Salut. Fes la mateixa petició abans i després d'afegir la destresa i compara.</p>
+  </div>
+  <p class="note">Si una prova falla: canvia una sola norma de les instruccions, obre un xat nou i torna a provar.</p>
+</section>
+
+<section id="destresa">
+  <h2>Destresa: Missatge curt</h2>
+  <p class="hint">L'agent ja sap la informació; la destresa li ensenya a convertir-la en un SMS. Abans d'afegir-la, demana un SMS sobre la grip i guarda el resultat per comparar.</p>
+  <p class="hint">Destreses › fletxa al costat d'Afegeix › Crea amb el xat. Enganxa aquest text al xat de l'esquerra i espera que acabi.</p>
+  <div class="card">
+    <div class="card-head"><span class="label">Petició per crear la destresa</span><button class="copy" type="button">Copia</button></div>
+    <pre>Vull crear una habilitat nova anomenada "Missatge curt". S'ha d'activar quan l'usuari demani un SMS, un WhatsApp o un missatge curt per a la ciutadania. Ha de: 1) buscar la informació a Canal Salut, 2) escriure un sol missatge amb frases molt curtes: el text, sense comptar l'enllaç, ha de tenir com a màxim 90 caràcters, 3) incloure què ha de fer la persona i, al final, l'enllaç a la pàgina exacta de Canal Salut, 4) fer servir tractament de vostè i llenguatge clar, sense emojis ni abreviatures. No indiquis el nombre de caràcters. No ha d'incloure dades personals ni consell mèdic. No canviïs res més de l'agent.</pre>
+  </div>
+  <p class="note">Per què «90 caràcters sense l'enllaç» i no «160 en total»? Perquè la IA compta malament els caràcters: a les proves deia 158 quan eren 163. Amb aquest marge, el missatge sempre cap en un SMS.</p>
+</section>
+
+<section id="elteu">
+  <h2>Fes-ne un per a la teva feina</h2>
+  <p class="hint">Enganxa aquest prompt a Copilot Chat, omple els claudàtors i revisa el que et proposi abans de fer-lo servir.</p>
+  <div class="card">
+    <div class="card-head"><span class="label">Prompt per dissenyar el teu agent</span><button class="copy" type="button">Copia</button></div>
+    <pre>Vull crear un agent amb Agent Builder de Copilot. La tasca que ha de fer és: [descriu la tasca]. Avui la faig així: [passos que segueixo]. El resultat que espero és: [resultat]. La web pública que pot consultar és: [adreça].
+
+Escriu-me les instruccions de l'agent en quatre blocs (ROL, OBJECTIU, NORMES numerades i FORMAT DE RESPOSTA), amb un màxim de 8 normes. Inclou una norma sobre dades personals, una sobre citar sempre la font i una sobre les peticions fora d'abast.
+
+Proposa'm també tres sol·licituds suggerides i tres preguntes de prova: un cas normal, un cas amb dades personals i un cas fora d'abast.</pre>
+  </div>
+  <p class="note"><strong>Com triar una bona font web:</strong> funcionen millor les webs amb una pàgina per tema. Els PDF no s'accepten com a font, i les pàgines amb el detall amagat en subpàgines amb paràmetres sovint no es troben. Prova-la sempre amb una pregunta concreta i comprova l'enllaç de la resposta.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Setmana de la IA 2026 · Generalitat de Catalunya · Pla d'adopció de la IA. La informació de Canal Salut pot canviar: consulta sempre la pàgina oficial.</div>
+</footer>
+
+<script>
+  document.querySelectorAll('button.copy').forEach(function (btn) {
+    var original = btn.textContent;
+    btn.setAttribute('aria-live', 'polite');
+    btn.addEventListener('click', function () {
+      var text = btn.closest('.card').querySelector('pre').innerText;
+      var done = function () {
+        btn.textContent = 'Copiat';
+        btn.classList.add('done');
+        setTimeout(function () { btn.textContent = original; btn.classList.remove('done'); }, 1800);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done, function () { fallback(text); done(); });
+      } else { fallback(text); done(); }
+    });
+  });
+  function fallback(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.position = 'absolute'; ta.style.left = '-9999px';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+</script>
+</body>
+</html>
